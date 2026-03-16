@@ -210,10 +210,10 @@
    ============================================ */
 
 .hero {
-  min-height: 100dvh;
   display: flex;
   align-items: center;
   padding-top: 80px;
+  padding-bottom: 0;
   position: relative;
   overflow: hidden;
 }
@@ -229,7 +229,8 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+  padding-top: clamp(var(--space-10), 5vw, var(--space-16));
+  padding-bottom: clamp(var(--space-10), 5vw, var(--space-16));
 }
 
 .hero-eyebrow {
@@ -336,7 +337,8 @@
    ============================================ */
 
 .paths-section {
-  padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+  padding-top: clamp(var(--space-12), 6vw, var(--space-20));
+  padding-bottom: clamp(var(--space-16), 10vw, var(--space-32));
   border-top: 1px solid var(--color-divider);
 }
 
