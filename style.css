@@ -356,8 +356,23 @@
   gap: var(--space-6);
 }
 
+.paths-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.paths-grid--three .path-title {
+  font-size: clamp(1.1rem, 0.8rem + 1vw, 1.6rem);
+}
+
+@media (max-width: 900px) {
+  .paths-grid--three {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 640px) {
-  .paths-grid {
+  .paths-grid,
+  .paths-grid--three {
     grid-template-columns: 1fr;
   }
 }
