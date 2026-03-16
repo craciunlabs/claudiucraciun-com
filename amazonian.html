@@ -224,7 +224,7 @@
               </ul>
             </div>
             <div>
-              <p style="font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-4);">It is not right if</p>
+              <p style="font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-4);">It is not right if</p>
               <ul class="what-list">
                 <li>You are in acute psychological crisis</li>
                 <li>You are looking for an experience, not a transformation</li>
@@ -237,18 +237,28 @@
         </div>
 
         <!-- TESTIMONIALS -->
-        <div class="testimonial-strip" style="margin-bottom: var(--space-12);">
-          <div class="testimonial-strip-item">
-            <p class="testimonial-strip-quote">"Your remarkable expertise and distinctive perspective have proven indispensable. Each conversation has been a treasure trove of invaluable insights. Your dedication to the betterment of others embodies a level of altruism that sets a remarkable standard."</p>
-            <p class="testimonial-strip-name">Rudi Vanlancker — Personal training studio founder, Brussels</p>
+        <div class="testimonial-strip-wrap" style="margin-bottom: var(--space-12);">
+          <div class="testimonial-strip" id="amazonian-testimonial-strip">
+            <div class="testimonial-strip-item">
+              <p class="testimonial-strip-quote">"Your remarkable expertise and distinctive perspective have proven indispensable. Each conversation has been a treasure trove of invaluable insights. Your dedication to the betterment of others embodies a level of altruism that sets a remarkable standard."</p>
+              <p class="testimonial-strip-name">Rudi Vanlancker — Personal training studio founder, Brussels</p>
+            </div>
+            <div class="testimonial-strip-item">
+              <p class="testimonial-strip-quote">"I owe a lot of finding my voice to Claudiu. As a solopreneur, it is hard to deal with the fear and anxiety of building something by yourself. Claudiu has been the wise and kind eye to help me figure out my next steps."</p>
+              <p class="testimonial-strip-name">Bio Vidigal — Solopreneur, Brazil</p>
+            </div>
+            <div class="testimonial-strip-item" style="border-bottom: none; padding-bottom: 0;">
+              <p class="testimonial-strip-quote">"His clarity, humility to help, and strength have leveraged my personal and team work to be more professional in our service. Four years and counting."</p>
+              <p class="testimonial-strip-name">Devi Chandra Ma — Medicine Woman, Prana Verein</p>
+            </div>
           </div>
-          <div class="testimonial-strip-item">
-            <p class="testimonial-strip-quote">"I owe a lot of finding my voice to Claudiu. As a solopreneur, it is hard to deal with the fear and anxiety of building something by yourself. Claudiu has been the wise and kind eye to help me figure out my next steps."</p>
-            <p class="testimonial-strip-name">Bio Vidigal — Solopreneur, Brazil</p>
-          </div>
-          <div class="testimonial-strip-item">
-            <p class="testimonial-strip-quote">"His clarity, humility to help, and strength have leveraged my personal and team work to be more professional in our service. Four years and counting."</p>
-            <p class="testimonial-strip-name">Devi Chandra Ma — Medicine Woman, Prana Verein</p>
+          <div class="testimonial-strip-fade">
+            <button class="testimonial-strip-scroll-btn" id="amazonian-strip-scroll-btn" aria-label="Scroll down to apply">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+              </svg>
+              <span>Apply below</span>
+            </button>
           </div>
         </div>
 
@@ -331,7 +341,7 @@
             <hr class="form-divider">
 
             <!-- LEGAL NOTE — quiet, matter-of-fact, before submit -->
-            <p style="font-size: var(--text-xs); color: var(--color-text-faint); line-height: 1.7; margin-bottom: var(--space-6);">
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6);">
               This is a consultation and integration service. Retreats take place in Peru and are conducted by an indigenous family operating under their own legal entity in the Amazon. The traditional ceremony work is entirely theirs — their knowledge, their authority, their tradition. My role is preparation, accompaniment, and integration. Payment details are provided on acceptance.
             </p>
 
@@ -408,6 +418,15 @@
     }
     lastScroll = current;
   }, { passive: true });
+
+  // Scroll-to-apply nudge
+  const stripBtn = document.getElementById('amazonian-strip-scroll-btn');
+  if (stripBtn) {
+    stripBtn.addEventListener('click', () => {
+      const form = document.getElementById('amazonian-form');
+      if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 
   const form = document.getElementById('amazonian-form');
   const success = document.getElementById('form-success');
