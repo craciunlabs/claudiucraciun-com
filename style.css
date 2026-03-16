@@ -421,7 +421,7 @@
   font-size: var(--text-3xl);
   font-weight: 300;
   line-height: 1;
-  color: oklch(from var(--color-primary) l c h / 0.5);
+  color: oklch(from var(--color-primary) l c h / 0.75);
   letter-spacing: -0.02em;
 }
 
@@ -451,6 +451,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--color-primary);
   margin-top: var(--space-2);
 }
