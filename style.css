@@ -1113,3 +1113,59 @@
     align-items: flex-start;
   }
 }
+
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+
+.skills-section {
+  padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+  border-top: 1px solid var(--color-divider);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-10) var(--space-8);
+  margin-top: var(--space-10);
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.skill-icon {
+  color: var(--color-primary);
+  opacity: 0.85;
+}
+
+.skill-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.skill-body {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
