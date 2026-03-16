@@ -49,6 +49,12 @@
         <span class="logo-text">Claudiu <span>Craciun</span></span>
       </a>
       <div class="header-actions">
+        <a href="./index.html" class="back-link" aria-label="Back to home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          <span>Back</span>
+        </a>
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -120,7 +126,7 @@
         </div>
 
         <div style="margin-top: var(--space-6);">
-          <p style="font-size: var(--text-xs); color: var(--color-text-faint); line-height: 1.65; letter-spacing: 0.01em;">
+          <p style="font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.65; letter-spacing: 0.01em;">
             This is not therapy. Not a psychic reading. Not a coaching programme. One focused conversation that gives you a clear direction.
           </p>
         </div>
@@ -232,18 +238,28 @@
           <hr class="form-divider">
 
           <!-- TESTIMONIAL STRIP -->
-          <div class="testimonial-strip">
-            <div class="testimonial-strip-item">
-              <p class="testimonial-strip-quote">"He knows both worlds — the spiritual and the 'normal' societal one — and bridges them with rare authenticity."</p>
-              <span class="testimonial-strip-name">Alen Oberlechner — Professional medium, Austria</span>
+          <div class="testimonial-strip-wrap">
+            <div class="testimonial-strip" id="testimonial-strip">
+              <div class="testimonial-strip-item">
+                <p class="testimonial-strip-quote">"He knows both worlds — the spiritual and the 'normal' societal one — and bridges them with rare authenticity."</p>
+                <span class="testimonial-strip-name">Alen Oberlechner — Professional medium, Austria</span>
+              </div>
+              <div class="testimonial-strip-item">
+                <p class="testimonial-strip-quote">"I owe a lot of finding my voice to Claudiu. He has been the wise and kind eye to help me figure out my next steps."</p>
+                <span class="testimonial-strip-name">Bio Vidigal — Solopreneur, Brazil</span>
+              </div>
+              <div class="testimonial-strip-item" style="border-bottom: none; padding-bottom: 0;">
+                <p class="testimonial-strip-quote">"His perspective and life experience WILL benefit you."</p>
+                <span class="testimonial-strip-name">Matthew Ferguson</span>
+              </div>
             </div>
-            <div class="testimonial-strip-item">
-              <p class="testimonial-strip-quote">"I owe a lot of finding my voice to Claudiu. He has been the wise and kind eye to help me figure out my next steps."</p>
-              <span class="testimonial-strip-name">Bio Vidigal — Solopreneur, Brazil</span>
-            </div>
-            <div class="testimonial-strip-item">
-              <p class="testimonial-strip-quote">"His perspective and life experience WILL benefit you."</p>
-              <span class="testimonial-strip-name">Matthew Ferguson</span>
+            <div class="testimonial-strip-fade">
+              <button class="testimonial-strip-scroll-btn" id="strip-scroll-btn" aria-label="Scroll down to submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+                <span>Submit below</span>
+              </button>
             </div>
           </div>
 
@@ -326,6 +342,15 @@
     }
     lastScroll = current;
   }, { passive: true });
+
+  // Scroll-to-submit nudge button
+  const stripBtn = document.getElementById('strip-scroll-btn');
+  if (stripBtn) {
+    stripBtn.addEventListener('click', () => {
+      const submitArea = document.querySelector('.form-submit-area');
+      if (submitArea) submitArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 
   // Form submission
   const form = document.getElementById('clarity-form');

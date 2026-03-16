@@ -657,7 +657,8 @@
 
 .form-label-sub {
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  opacity: 0.6;
   font-weight: 400;
   display: block;
   margin-top: var(--space-1);
@@ -749,7 +750,7 @@
 
 .form-note {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   line-height: 1.65;
   max-width: 52ch;
 }
@@ -904,16 +905,81 @@
   font-weight: 300;
 }
 
+/* Back link in header */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-interactive);
+  margin-right: var(--space-4);
+}
+.back-link:hover {
+  color: var(--color-primary);
+}
+
 /* Inline testimonial strip for clarity page */
+.testimonial-strip-wrap {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
 .testimonial-strip {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
   padding: clamp(var(--space-8), 4vw, var(--space-10));
+  padding-bottom: clamp(var(--space-10), 5vw, var(--space-14));
   border: 1px solid oklch(from var(--color-primary) l c h / 0.2);
   border-radius: var(--radius-lg);
   background: var(--color-surface);
-  margin-bottom: var(--space-8);
+}
+
+.testimonial-strip-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--color-surface));
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: var(--space-4);
+  pointer-events: none;
+}
+
+.testimonial-strip-scroll-btn {
+  pointer-events: all;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-interactive);
+  animation: nudge-down 2s ease-in-out infinite;
+}
+.testimonial-strip-scroll-btn:hover {
+  opacity: 0.7;
+}
+
+@keyframes nudge-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 .testimonial-strip-item {
