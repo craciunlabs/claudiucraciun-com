@@ -6,7 +6,7 @@ Personal site for Claudiu Craciun — business strategist, tech professional, an
 
 Two worlds. One path.
 
-Twenty years in business and technology. Eight years working with traditional Amazonian plant medicine. This site lives at the intersection of both.
+Over two decades in business and technology — started at 15. Eight years working with traditional Amazonian plant medicine. This site lives at the intersection of both.
 
 **Live site:** [claudiucraciun.com](https://claudiucraciun.com)
 
