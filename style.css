@@ -421,7 +421,7 @@
   font-size: var(--text-3xl);
   font-weight: 300;
   line-height: 1;
-  color: oklch(from var(--color-primary) l c h / 0.25);
+  color: oklch(from var(--color-primary) l c h / 0.5);
   letter-spacing: -0.02em;
 }
 
@@ -898,7 +898,8 @@
 
 .testimonial-role {
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  opacity: 0.55;
   font-weight: 300;
 }
 
