@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/solution/:path*", "destination": "/", "permanent": true },
+    { "source": "/the-team/:path*", "destination": "/", "permanent": true },
+    { "source": "/work/:path*", "destination": "/", "permanent": true },
+    { "source": "/masterclass", "destination": "/", "permanent": true },
+    { "source": "/masterclass-copy", "destination": "/", "permanent": true },
+    { "source": "/blog/:path*", "destination": "/", "permanent": true },
+    { "source": "/post/:path*", "destination": "/", "permanent": true },
+    { "source": "/category/:path*", "destination": "/", "permanent": true }
+  ]
+}
