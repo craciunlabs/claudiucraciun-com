@@ -1,5 +1,9 @@
 {
   "redirects": [
+    { "source": "/clarity.html", "destination": "https://theholistic.io/clarity.html", "permanent": true },
+    { "source": "/clarity", "destination": "https://theholistic.io/clarity.html", "permanent": true },
+    { "source": "/amazonian.html", "destination": "https://theholistic.io/amazonian.html", "permanent": true },
+    { "source": "/amazonian", "destination": "https://theholistic.io/amazonian.html", "permanent": true },
     { "source": "/solution/:path*", "destination": "/", "permanent": true },
     { "source": "/the-team/:path*", "destination": "/", "permanent": true },
     { "source": "/work/:path*", "destination": "/", "permanent": true },

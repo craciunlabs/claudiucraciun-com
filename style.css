@@ -1,7 +1,7 @@
 /* ============================================
    THE HOLISTIC — claudiucraciun.com
    Palette: Near-black #0D0C0A, Gold #C9A84C
-   Typography: Cormorant Garant (display) + Switzer (body)
+   Typography: Cormorant Garamond (display) + Switzer (body)
    Aesthetic: Luxury editorial, restrained, no spiritual clichés
    ============================================ */
 
@@ -46,7 +46,7 @@
   --content-wide: 1160px;
 
   /* Fonts */
-  --font-display: 'Cormorant Garant', 'Georgia', serif;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-body: 'Switzer', 'Helvetica Neue', sans-serif;
 }
 
@@ -502,6 +502,15 @@
 .site-footer {
   padding-block: clamp(var(--space-12), 6vw, var(--space-20));
   border-top: 1px solid var(--color-divider);
+}
+
+.footer-signoff {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  letter-spacing: 0.01em;
 }
 
 .footer-inner {
