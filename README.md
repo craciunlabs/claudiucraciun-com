@@ -39,6 +39,12 @@ Static HTML/CSS/JS — no build step required. Deploy directly to Vercel, Netlif
 vercel --prod
 ```
 
+## Maintainer
+
+- **Commit author:** `Claudiu Craciun <claudiubackend@gmail.com>` — always author commits to this repo with this email.
+- **GitHub:** [@craciunlabs](https://github.com/craciunlabs) · **Hosting:** Vercel (team `craciunlabs-projects`).
+- **Deploys:** a push/merge to `main` ships to Vercel production → [www.claudiucraciun.com](https://www.claudiucraciun.com). Pull requests get an auth-protected Vercel preview.
+
 ## Content Updates
 
 - Testimonials pull real photos from [testimonial.to/claudiucraciun-com](https://testimonial.to/claudiucraciun-com/all)
